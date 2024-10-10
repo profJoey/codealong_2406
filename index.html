@@ -3,49 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple List App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        input, button {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Simple To-Do List App</title>
 </head>
 <body>
     <h1>Simple List App</h1>
     <p>Add items to your list below:</p>
     <input type="text" id="itemInput" placeholder="Enter a new item">
-    <button onclick="addItem()">Add Item</button>
+    <button>Add Item</button>
     <ul id="itemList"></ul>
-
-    <script>
-        // JavaScript allows us to add interactivity to our webpage.
-        // Here we will start by learning how to add items to a list.
-
-        // This is a function that will run when the button is clicked.
-        function addItem() {
-            // Select the input element and get its value
-            const input = document.getElementById('itemInput');
-            const itemText = input.value.trim();
-
-            // Check if the input is not empty
-            if (itemText !== "") {
-                // Create a new list item (li)
-                const li = document.createElement('li');
-
-                // Set the text of the list item to the input value
-                li.textContent = itemText;
-
-                // Append the new list item to the existing list (ul)
-                document.getElementById('itemList').appendChild(li);
-
-                // Clear the input field after adding the item
-                input.value = "";
-            }
-        }
-    </script>
 </body>
 </html>
